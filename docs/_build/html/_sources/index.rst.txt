@@ -6,14 +6,8 @@ the every manual process in the company
 
 This project is an Integrated UI of Multiple projects
 
-.. toctree::
-   :maxdepth: 2
 
-   intro
-   strings
-   datatypes
-   numeric
-   
+
 Sub Projects
 ------------
 
@@ -35,8 +29,8 @@ leaves
 Contribute
 ----------
 
-- Issue Tracker: github.com/$project/$project/issues
-- Source Code: github.com/$project/$project
+- Issue Tracker: github.com/umashankar-rapiqube/StreamLine/issues
+- Source Code: github.com/umashankar-rapiqube/StreamLine
 
 Support
 -------
