@@ -7,6 +7,10 @@ the every manual process in the company
 This project is an Integrated UI of Multiple projects
 
 
+.. toctree::
+   :maxdepth: 2
+
+   leaves
 
 Sub Projects
 ------------

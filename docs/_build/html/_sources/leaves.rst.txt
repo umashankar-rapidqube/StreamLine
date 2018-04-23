@@ -36,6 +36,5 @@ Raising a leave Request:
     
 Types of leaves
 ---------------
-    - Earned Leave
-    - LOP - Loss Of Pay
-    - Optional Holiday
+    - Earned leave
+    - 
