@@ -6,6 +6,8 @@ the every manual process in the company
 
 This project is an Integrated UI of Multiple projects
 
+
+
 Sub Projects
 ------------
 
@@ -19,17 +21,16 @@ Sub Projects
 - IdeaBox - where anyone can post an idea and get feedback from users
 
 leaves
-------------
+------
 
-Install $project by running:
-
-    install project
+    This module allows user to apply and manage their leaves, For more information
+    click <>here 
 
 Contribute
 ----------
 
-- Issue Tracker: github.com/$project/$project/issues
-- Source Code: github.com/$project/$project
+- Issue Tracker: github.com/umashankar-rapiqube/StreamLine/issues
+- Source Code: github.com/umashankar-rapiqube/StreamLine
 
 Support
 -------
