@@ -1,5 +1,5 @@
-Leaves Management
-=================
+Leaves 
+======
     This process flow explains process flow of leaves management
 
 Process
@@ -36,5 +36,6 @@ Raising a leave Request:
     
 Types of leaves
 ---------------
-    - Earned leave
-    - 
+    - Earned Leave
+    - LOP - Loss Of Pay
+    - Optional Holiday

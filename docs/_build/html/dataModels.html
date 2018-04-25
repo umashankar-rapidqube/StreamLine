@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Data Models &mdash; StreamLine  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="User Management" href="UserManagement.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> StreamLine
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Profile.html">User profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Profile.html#functionality">Functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Leaves.html">Leaves</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserManagement.html">User Management</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#user-model">user Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ticket-model">Ticket Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#config">config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#constants">constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#appraisal-form">Appraisal form</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">StreamLine</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Data Models</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/dataModels.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-models">
+<h1>Data Models<a class="headerlink" href="#data-models" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="user-model">
+<h2>user Model<a class="headerlink" href="#user-model" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+    _id: 1234567,
+    emp_id: 106,
+    fname: &quot;umashankar&quot;,
+    lname: &quot;somasekar&quot;,
+    email: &quot;umashankar.somasekar@rapidqube.com&quot;,
+    photo: &quot;https://www.someimagehost.com/aisdufads.jpg&quot;,
+    address: [{
+    street: &quot;primary street&quot;,
+    city: &quot;mumbai&quot;
+            },
+            {
+                    street: &quot;secondary street&quot;,
+                    city: &quot;chennai&quot;
+            }
+    ],
+    reports_to: 543210,
+    designation: &quot;head of development&quot;,
+    role: null,
+    projects_maped: [p123, p234, p345],
+    assets_info: [a123, a234, a345],
+    access: [&quot;employee&quot;, &quot;manager&quot;],
+    current_leave_balance: 12,
+    doj: 25 - mar - 2017,
+    status: &quot;active&quot;,
+    password_hash: kjl23hFDSCJDdajsdf1231hv2
+</pre></div>
+</div>
+<p>}</p>
+</div>
+<div class="section" id="ticket-model">
+<h2>Ticket Model<a class="headerlink" href="#ticket-model" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+    _id: t123,
+    date_created: 12-03-2017,
+    subject: &quot;OS reinstallation&quot;
+    description : &quot;Since the system has become very slow and ther is a lot of junk in the machine, i need a OS reinstallation&quot;,
+    assigned_to: [12345, 23445],
+    current_assignee:23445,
+    manager_approval_required: &#39;Y&#39;,
+    approval_status: &quot;pending&quot;,
+    ticket_status: &quot;waiting for approval&quot;,
+    type : &quot;INFRA&quot;,
+    sub_type: &quot;OS installation&quot;
+    comments: [
+                {
+                &quot;date&quot; : ISODate(&quot;2017-02-10T10:50:42.389Z&quot;),
+                &quot;comment&quot;: &quot;please mentonion the type of OS to be installed&quot;
+                &quot;comment_by&quot;:&quot;Ajay&quot;
+                }
+            ],
+    priority: &quot;medium&quot;,
+    closed_on: ISODate(&quot;2017-03-10T10:50:42.389Z&quot;),
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="config">
+<h2>config<a class="headerlink" href="#config" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+    key1 : &quot;value&quot;,
+    leave_carryover_percentage : 50,
+    login_retry_count : 3,
+    keyn : &quot;valueN&quot;,
+    optional_holidays : 4
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="constants">
+<h2>constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+    leave_types : [&quot;Earned Leave&quot;, &quot;LOP&quot;],
+    priority_types : [&quot;high&quot;, &quot;medium&quot;, &quot;low&quot;]
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="appraisal-form">
+<h2>Appraisal form<a class="headerlink" href="#appraisal-form" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>&lt;todo&gt;</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="UserManagement.html" class="btn btn-neutral" title="User Management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Umashankar.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

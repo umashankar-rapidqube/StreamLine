@@ -1,16 +1,14 @@
 StreamLine
 ===========
 
+
 An integrated portal for RapidQube to sreamline/automate 
 the every manual process in the company
 
 This project is an Integrated UI of Multiple projects
 
 
-.. toctree::
-   :maxdepth: 2
 
-   leaves
 
 Sub Projects
 ------------
@@ -24,24 +22,22 @@ Sub Projects
 - Rewards and Recognitions -  to create a process to streamline Employee rewards and Recognitions
 - IdeaBox - where anyone can post an idea and get feedback from users
 
-leaves
-------
 
-    This module allows user to apply and manage their leaves, For more information
-    click <>here 
+Architecture
+------------
 
-Contribute
-----------
+.. image:: _images/architecture.png
 
-- Issue Tracker: github.com/umashankar-rapiqube/StreamLine/issues
-- Source Code: github.com/umashankar-rapiqube/StreamLine
-
-Support
--------
-
-If you are having issues, please let us know.
-We have a mailing list located at: project@google-groups.com
-
+.. toctree::
+   :maxdepth: 1
+   :caption: Table of Contents
+   
+   Profile
+   Leaves
+   Contribute
+   UserManagement
+   dataModels
+ 
 License
 -------
 
