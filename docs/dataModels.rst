@@ -27,10 +27,16 @@ user Model
 	projects_maped: [p123, p234, p345],
 	assets_info: [a123, a234, a345],
 	access: ["employee", "manager"],
-	current_leave_balance: 12,
+	current_leave_balance: 12,    
 	doj: 25 - mar - 2017,
 	status: "active",
-	password_hash: kjl23hFDSCJDdajsdf1231hv2
+	password_hash: kjl23hFDSCJDdajsdf1231hv2,
+    multichain_wallet:{
+            encrypted_public_key:"lghlJGIVS2312vklvldaAAvdlajd123qhvjd",
+            encrypted_private_key:"lghlJGIVS2312vklvldaAAvdlajd123qhvjd",
+            rapid_cash_balance: 50,
+        }
+    }
 
 Ticket Model
 ------------
