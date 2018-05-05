@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Rapid Cash" href="RapidCash.html" />
     <link rel="prev" title="User Management" href="UserManagement.html" /> 
 
   
@@ -83,7 +84,6 @@
 <li class="toctree-l1"><a class="reference internal" href="Profile.html">User profile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Profile.html#functionality">Functionality</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Leaves.html">Leaves</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Contribute.html">Contribute</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UserManagement.html">User Management</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Data Models</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#user-model">user Model</a></li>
@@ -93,6 +93,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#appraisal-form">Appraisal form</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="RapidCash.html">Rapid Cash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="StreamQ.html">StreamQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Contribute.html">Contribute</a></li>
 </ul>
 
             
@@ -144,7 +147,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/dataModels.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/DataModels.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -186,16 +189,22 @@
     current_leave_balance: 12,
     doj: 25 - mar - 2017,
     status: &quot;active&quot;,
-    password_hash: kjl23hFDSCJDdajsdf1231hv2
+    password_hash: kjl23hFDSCJDdajsdf1231hv2,
+multichain_wallet:{
+        encrypted_public_key:&quot;lghlJGIVS2312vklvldaAAvdlajd123qhvjd&quot;,
+        encrypted_private_key:&quot;lghlJGIVS2312vklvldaAAvdlajd123qhvjd&quot;,
+        rapid_cash_balance: 50,
+    }
+}
 </pre></div>
 </div>
-<p>}</p>
 </div>
 <div class="section" id="ticket-model">
 <h2>Ticket Model<a class="headerlink" href="#ticket-model" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
     _id: t123,
     date_created: 12-03-2017,
+    created_by: 12345,
     subject: &quot;OS reinstallation&quot;
     description : &quot;Since the system has become very slow and ther is a lot of junk in the machine, i need a OS reinstallation&quot;,
     assigned_to: [12345, 23445],
@@ -214,6 +223,7 @@
             ],
     priority: &quot;medium&quot;,
     closed_on: ISODate(&quot;2017-03-10T10:50:42.389Z&quot;),
+    due_date: ISODate(&quot;2017-03-10T10:50:42.389Z&quot;)
 }
 </pre></div>
 </div>
@@ -225,7 +235,11 @@
     leave_carryover_percentage : 50,
     login_retry_count : 3,
     keyn : &quot;valueN&quot;,
-    optional_holidays : 4
+    optional_holidays : 4,
+    default_infra_assignee: 5677,
+    min_due_days_infra: 1 ,
+    min_due_days_leaves : 5,
+    min_due_days_finance: 3
 }
 </pre></div>
 </div>
@@ -234,7 +248,8 @@
 <h2>constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
     leave_types : [&quot;Earned Leave&quot;, &quot;LOP&quot;],
-    priority_types : [&quot;high&quot;, &quot;medium&quot;, &quot;low&quot;]
+    priority_types : [&quot;high&quot;, &quot;medium&quot;, &quot;low&quot;],
+    ticket_status_types : [&quot;open&quot;, &quot;in-progress&quot;, &quot;waiting-for-approval&quot;, &quot;re-opned&quot;, &quot;closed&quot;]
 }
 </pre></div>
 </div>
@@ -253,6 +268,8 @@
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="RapidCash.html" class="btn btn-neutral float-right" title="Rapid Cash" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="UserManagement.html" class="btn btn-neutral" title="User Management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

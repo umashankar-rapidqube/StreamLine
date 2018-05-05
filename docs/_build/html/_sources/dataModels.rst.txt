@@ -27,12 +27,16 @@ user Model
 	projects_maped: [p123, p234, p345],
 	assets_info: [a123, a234, a345],
 	access: ["employee", "manager"],
-	current_leave_balance: 12,
+	current_leave_balance: 12,    
 	doj: 25 - mar - 2017,
 	status: "active",
-	password_hash: kjl23hFDSCJDdajsdf1231hv2
-}
-
+	password_hash: kjl23hFDSCJDdajsdf1231hv2,
+    multichain_wallet:{
+            encrypted_public_key:"lghlJGIVS2312vklvldaAAvdlajd123qhvjd",
+            encrypted_private_key:"lghlJGIVS2312vklvldaAAvdlajd123qhvjd",
+            rapid_cash_balance: 50,
+        }
+    }
 
 Ticket Model
 ------------
@@ -41,6 +45,7 @@ Ticket Model
     {
         _id: t123,
         date_created: 12-03-2017,
+        created_by: 12345,
         subject: "OS reinstallation"
         description : "Since the system has become very slow and ther is a lot of junk in the machine, i need a OS reinstallation",
         assigned_to: [12345, 23445],
@@ -59,6 +64,7 @@ Ticket Model
                 ],
         priority: "medium",        
         closed_on: ISODate("2017-03-10T10:50:42.389Z"),
+        due_date: ISODate("2017-03-10T10:50:42.389Z")
     }
 
 config
@@ -70,7 +76,11 @@ config
         leave_carryover_percentage : 50,
         login_retry_count : 3,
         keyn : "valueN",
-        optional_holidays : 4
+        optional_holidays : 4,
+        default_infra_assignee: 5677,
+        min_due_days_infra: 1 ,
+        min_due_days_leaves : 5,
+        min_due_days_finance: 3
     }
 
 constants
@@ -79,7 +89,8 @@ constants
 
     {
         leave_types : ["Earned Leave", "LOP"],
-        priority_types : ["high", "medium", "low"]
+        priority_types : ["high", "medium", "low"],
+        ticket_status_types : ["open", "in-progress", "waiting-for-approval", "re-opned", "closed"]
     }
 
 

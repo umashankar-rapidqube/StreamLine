@@ -33,10 +33,12 @@ Architecture
    :caption: Table of Contents
    
    Profile
-   Leaves
-   Contribute
+   Leaves   
    UserManagement
-   dataModels
+   DataModels
+   RapidCash
+   StreamQ
+   Contribute
  
 License
 -------
