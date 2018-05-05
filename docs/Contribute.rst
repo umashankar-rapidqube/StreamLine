@@ -20,6 +20,12 @@ Trello ID, https://trello.com/b/zZrOU7mq/streamline
 
 Slack Invitaion : https://join.slack.com/t/rapidqube/shared_invite/enQtMzUxMDEwNDI2Njc2LWExNGYyYWRmYWU0NmEzMGU0NzI3MzE1NDUyZTU4NjdmODk2YjhiZDhmOTUzYmNlYjQ2Y2UyNGNmNDM4OTE0YjA
 
+References:
+-----------
+    Ember-cli - https://github.com/martndemus/ember-font-awesome
+    Icons - https://github.com/martndemus/ember-font-awesome
+    css - https://github.com/kaliber5/ember-bootstrap
+
 
 
 

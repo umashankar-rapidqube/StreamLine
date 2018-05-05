@@ -39,6 +39,7 @@ Architecture
    RapidCash
    StreamQ
    Contribute
+   MyIssues
  
 License
 -------
