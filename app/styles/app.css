@@ -1,3 +1,8 @@
+
+body {
+    background-image: url("background.jpeg");
+}
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -21,8 +26,39 @@
 	line-height: 26.4px;
 }
 
+.large-icons{
+	font-size: 5.333333em;	
+}
+
+.icon-bg{
+	background: rgba(250, 247, 247, 0.404);
+    border-radius: 15px;
+    padding-top: 86px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.iconset{
+	padding-top: 86px;
+	font-size: 22px;
+}
+
+.icon-text{
+	font-family: 'Caveat';
+	font-size: 22px;
+}
+.icon-cell{
+	text-align: center;
+}
+
+
+.rcorners1 {
+    border-radius: 15px;
+     padding: 20px;  
+}
+
 .login-container {
-    padding-top: 90px;
+    padding-top: 60px;
 }
 .panel-login {
 	border-color: #ccc;

@@ -2,6 +2,17 @@
 
 module.exports = function(environment) {
   let ENV = {
+    googleFonts: [
+      'Open+Sans:300,400,700',
+      'Roboto:300'
+    ],
+
+    // Set or update content security policies
+    contentSecurityPolicy: {
+      'font-src': "'self' fonts.gstatic.com",
+      'style-src': "'self' fonts.googleapis.com"
+    },
+
     modulePrefix: 'stream-line',
     environment,
     rootURL: '/',
