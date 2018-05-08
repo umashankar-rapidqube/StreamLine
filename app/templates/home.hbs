@@ -3,19 +3,20 @@
 
 <div class="container">
 <div class="row iconset">
-  <div class="col-xs-6 col-md-4 icon-cell">   
+  <div class="col-xs-6 col-md-4 icon-cell" {{action 'redirect' 'myissue'}}>   
       <span class="icon-bg">  
         <font color="#80BD66"> {{fa-icon "gears" class="large-icons"}} </font>
         </span> 
         <div class='icon-text'>My Issues</div>
       
   </div>
-  <div class="col-xs-6 col-md-4 icon-cell"><span class="icon-bg">  
+  <div class="col-xs-6 col-md-4 icon-cell" {{action 'redirect' 'leaves'}}>
+      <span class="icon-bg">  
         <font color="#80BD66"> {{fa-icon "hotel" class="large-icons"}} </font>
         </span> 
       <div class='icon-text'>leaves</div>
   </div>
-  <div class="col-xs-6 col-md-4 icon-cell">
+  <div class="col-xs-6 col-md-4 icon-cell" {{action 'redirect' 'ideabox'}}>
       <span class="icon-bg"> 
       <font color="#80BD66">{{fa-icon "lightbulb-o" class="large-icons"}}</font>
       </span>

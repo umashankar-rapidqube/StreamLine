@@ -1,1 +1,40 @@
-{{outlet}}
+<div class="container white">
+
+
+Choose the issue type :
+<!--http://ember-power-select.com/docs/how-to-use-it-->
+
+  <div class="row">
+      <div class="col-sm-4 bottom-padding-10">
+          {{#power-select options=issuetypes onchange=(action "choose") as |type|}}
+            {{type}}
+            {{/power-select}}       
+      </div>
+      <div class="col-sm-4 left">
+           {{type}}   
+      </div>
+      <div class="col-sm-4 right">
+          
+           {{#if type}}
+             <input type="button" class="btn btn-primary" value="CREATE NEW" {{action "createIssue"}}/>										
+            {{/if}}
+      </div>
+    </div>
+
+<!--issue list-->
+{{#if type}}
+    {{#each model as |issue|}}
+    <div class="row well">
+          <div class="col-sm-3 center">{{#link-to 'issue' issue.Id}} {{issue.Id}} {{/link-to}}</div>
+          <div class="col-sm-3 center">{{issue.Date}}</div>
+          <div class="col-sm-3 center">{{issue.Description}}</div>
+          <div class="col-sm-3 center">{{issue.Status}}</div>
+        
+    </div>
+    {{/each}}
+{{/if}}
+
+
+
+</div>
+

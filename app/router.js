@@ -10,6 +10,9 @@ Router.map(function() {
   this.route('login');
   this.route('home');
   this.route('myissue');
+  this.route('issue',{ path: '/issue/:issue_id' });
+  this.route('leaves');
+  this.route('ideabox');
 });
 
 export default Router;
