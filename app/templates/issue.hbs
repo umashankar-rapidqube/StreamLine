@@ -1,53 +1,36 @@
-hello world
-hello world
-hello world
-
-hello world
-hello world
-hello world
-hello world
-hello world
-
-hello world
-hello world
-
-hello world
-hello world
-hello world
-hello world
 
 
+<div class="container white">
+
+<span class="title"> Issue : </span>{{model.id}} 
+    <br/>
+   
+<div class="title right"> Status: {{model.status}}</div>
+    <br/>
+    
+<span class="title">Title: </span>{{model.title}}
+    <br/>
+   <span class="title"> date :</span> {{model.date}}
+    <br/>
+   <div class="title"> Description : </div>
+   <p class="well">{{model.description}}</p>
+    <br/>
+
+    <div>Comments:</div>
+
+    {{#each model.comments as |comment|}}
+    <div>
+        <span >{{comment.posted-by}}</span>
+        <span style="float:right;">{{comment.date}}</span>
+    </div>
+    <div class="panel panel-default">{{comment.comment-text}}</div>
+    {{/each}}
+
+     <label for="comment">Comment:</label>
+     {{textarea value=new-comment cols="123" rows="6"}}
+        {{new-comment}}
+     <input type="button" class="btn btn-primary left" value="POST" {{action "postComment" model.id new-comment}}/>	
+
+</div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-hello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello world
-
-
-hello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello world
-
-
-
-
-
-
-
-hello worldhello worldhello worldhello world

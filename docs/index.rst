@@ -38,6 +38,7 @@ Architecture
    DataModels
    RapidCash
    StreamQ
+   ApiSpecifications
    Contribute
    MyIssues
  

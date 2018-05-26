@@ -5,34 +5,75 @@ export default function() {
   this.get('/issues',function(){
     return {
       data:[{
-        id:123,
-        issueType: "infra",
-        title: "setup docker",
-        description: " i need ot setup docker in my machine",
-        comments:[],
-        date: "12-jan-2018",
-        status: "open"
-      },
-      {
-        id:321,
-        issueType: "infra",
-        title: "setup docker",
-        description: " i need ot setup docker in my machine",
-        comments:[],
-        date: "12-jan-2018",
-        status: "open"
-      },
-      {
-          id:245,
-          issueType: "finance",
-          title: "setup docker",
-          description: " i need ot setup docker in my machine",
-          comments:[],
-          date: "12-jan-2018",
-          status: "open"
+        id: '123',
+        type: 'issues',
+        attributes: {
+          title: 'setup docker',
+          'issue-type':'Infra',
+          description: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+          comments:[
+            {
+              date: "13-may-2018",
+              'posted-by': "umashankar",
+              'comment-text': ' Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip'
+            },
+            {
+              date: "13-may-2018",
+              'posted-by': "umashankar",
+              'comment-text': ' please provide approval'
+            },
+            {
+              date: "13-may-2018",
+              'posted-by': "umashankar",
+              'comment-text': ' please provide approval'
+            }
+          ],
+          date: '12-jan-2018',
+          status: 'open'
+        }
+        
       }]
     };
   })
+
+  this.get('/rentals', function() {
+    return {
+      data: [{
+        type: 'rentals',
+        id: 'grand-old-mansion',
+        attributes: {
+          title: 'Grand Old Mansion',
+          owner: 'Veruca Salt',
+          city: 'San Francisco',
+          "property-type": 'Estate',
+          bedrooms: 15,
+          image: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg'
+        }
+      }, {
+        type: 'rentals',
+        id: 'urban-living',
+        attributes: {
+          title: 'Urban Living',
+          owner: 'Mike Teavee',
+          city: 'Seattle',
+          "property-type": 'Condo',
+          bedrooms: 1,
+          image: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Alfonso_13_Highrise_Tegucigalpa.jpg'
+        }
+      }, {
+        type: 'rentals',
+        id: 'downtown-charm',
+        attributes: {
+          title: 'Downtown Charm',
+          owner: 'Violet Beauregarde',
+          city: 'Portland',
+          "property-type": 'Apartment',
+          bedrooms: 3,
+          image: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg'
+        }
+      }]
+    };
+  });
 
   // These comments are here to help you get started. Feel free to delete them.
 

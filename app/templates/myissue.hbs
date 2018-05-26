@@ -24,11 +24,12 @@ Choose the issue type :
 <!--issue list-->
 {{#if type}}
     {{#each model as |issue|}}
-    <div class="row well">
-          <div class="col-sm-3 center">{{#link-to 'issue' issue.Id}} {{issue.Id}} {{/link-to}}</div>
-          <div class="col-sm-3 center">{{issue.Date}}</div>
-          <div class="col-sm-3 center">{{issue.Description}}</div>
-          <div class="col-sm-3 center">{{issue.Status}}</div>
+  
+   <div class="row well">
+          <div class="col-sm-3 center">{{#link-to 'issue' issue}} {{issue.id}} {{/link-to}}</div>
+          <div class="col-sm-3 center">{{issue.date}}</div>
+          <div class="col-sm-3 center description">{{issue.description}}</div>
+          <div class="col-sm-3 center">{{issue.status}}</div>
         
     </div>
     {{/each}}
