@@ -5,36 +5,19 @@ export default function() {
   this.get('/leaves',function(){
     return {
       data:[{
-        id:111,
-        attributes:{
-          date:"12-04-2018",
-          reason:"personal",
-          from:"06-06-2018",
-          to:"06-06-2018",
-          stutus:"approved"
-        }
-      },
-      {
-        id:222,
-        attributes:{
-          date:"12-04-2018",
-          reason:"personal",
-          from:"06-06-2018",
-          to:"06-06-2018",
-          stutus:"approved"
-        }
-      },
-      {
-        id:333,
-        attributes:{
-          date:"12-04-2018",
-          reason:"personal",
-          from:"06-06-2018",
-          to:"06-06-2018",
-          stutus:"approved"
-        }
-      }]
-    }
+        "leaves": [{
+          "id": 1,
+          "remainingLeaves": 123,
+          "leaves": [1] }],
+          "leaves": [{
+          "id": 1,
+          "date": "2018-05-28T08:25:04.747Z",
+          "reason": "foo",
+          "from": "2018-05-28T08:25:04.747Z",
+          "to": "2018-05-28T08:25:04.747Z",
+          "leaveType": "foo",
+          "status": "foo" }]
+      }]}
   });
 
   this.get('/issues',function(){
