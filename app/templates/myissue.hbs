@@ -22,10 +22,11 @@ Choose the issue type :
     </div>
 
 <!--issue list-->
+<div class="panel panel-default">
 {{#if type}}
     {{#each model as |issue|}}
   
-   <div class="row well">
+   <div class="panel-body">
           <div class="col-sm-3 center">{{#link-to 'issue' issue}} {{issue.id}} {{/link-to}}</div>
           <div class="col-sm-3 center">{{issue.date}}</div>
           <div class="col-sm-3 center description">{{issue.description}}</div>
@@ -35,6 +36,7 @@ Choose the issue type :
     {{/each}}
 {{/if}}
 
+</div>
 
 
 </div>

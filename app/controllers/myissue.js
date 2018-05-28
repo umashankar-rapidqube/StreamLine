@@ -8,7 +8,7 @@ export default Controller.extend({
             this.set('type',type)
         },
         createIssue:function(){
-            
+            this.transitionToRoute('newissue');
         }
     }
 });

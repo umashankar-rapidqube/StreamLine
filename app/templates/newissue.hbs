@@ -1,0 +1,22 @@
+
+
+
+{{model}}
+
+<div class='container white'>
+    <div class="top-padding-10">
+    Issue title : {{input type="text" value=title disabled=entryNotAllowed size="50"}} 
+</div>
+
+  <div>
+    Description :   {{textarea value=description cols="123" rows="6"}}
+</div>
+
+<div>
+    Approver emailID : {{input type="text" value=description disabled=entryNotAllowed size="60"}}
+</div>
+
+<div class="bottom-padding-10">
+    <input type="button" class="btn btn-primary left" value="Create" {{action "createissue" }}/>
+</div>
+</div>

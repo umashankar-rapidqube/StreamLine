@@ -1,6 +1,41 @@
 export default function() {
 
-  this.namespace='/api'
+  this.namespace='/mockapi'
+
+  this.get('/leaves',function(){
+    return {
+      data:[{
+        id:111,
+        attributes:{
+          date:"12-04-2018",
+          reason:"personal",
+          from:"06-06-2018",
+          to:"06-06-2018",
+          stutus:"approved"
+        }
+      },
+      {
+        id:222,
+        attributes:{
+          date:"12-04-2018",
+          reason:"personal",
+          from:"06-06-2018",
+          to:"06-06-2018",
+          stutus:"approved"
+        }
+      },
+      {
+        id:333,
+        attributes:{
+          date:"12-04-2018",
+          reason:"personal",
+          from:"06-06-2018",
+          to:"06-06-2018",
+          stutus:"approved"
+        }
+      }]
+    }
+  });
 
   this.get('/issues',function(){
     return {
@@ -32,9 +67,103 @@ export default function() {
           status: 'open'
         }
         
+      },
+      {
+        id: '124',
+        type: 'issues',
+        attributes: {
+          title: 'setup docker',
+          'issue-type':'Infra',
+          description: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+          comments:[
+            {
+              date: "13-may-2018",
+              'posted-by': "umashankar",
+              'comment-text': ' Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip'
+            },
+            {
+              date: "13-may-2018",
+              'posted-by': "umashankar",
+              'comment-text': ' please provide approval'
+            },
+            {
+              date: "13-may-2018",
+              'posted-by': "umashankar",
+              'comment-text': ' please provide approval'
+            }
+          ],
+          date: '12-jan-2018',
+          status: 'open'
+        }
+        
+      },
+      {
+        id: '125',
+        type: 'issues',
+        attributes: {
+          title: 'setup docker',
+          'issue-type':'Infra',
+          description: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+          comments:[
+            {
+              date: "13-may-2018",
+              'posted-by': "umashankar",
+              'comment-text': ' Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip'
+            },
+            {
+              date: "13-may-2018",
+              'posted-by': "umashankar",
+              'comment-text': ' please provide approval'
+            },
+            {
+              date: "13-may-2018",
+              'posted-by': "umashankar",
+              'comment-text': ' please provide approval'
+            }
+          ],
+          date: '12-jan-2018',
+          status: 'open'
+        }
+        
       }]
     };
   })
+
+  this.patch('issues/:id', function(request){
+    return request;
+  });
+  
+  this.get('/issues/:id',function(schema, request){
+    var id = request.params.id;
+    return {
+      id: id,
+      type: 'issues',
+      attributes: {
+        title: 'setup docker',
+        'issue-type':'Infra',
+        description: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+        comments:[
+          {
+            date: "13-may-2018",
+            'posted-by': "umashankar",
+            'comment-text': ' Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip'
+          },
+          {
+            date: "13-may-2018",
+            'posted-by': "umashankar",
+            'comment-text': ' please provide approval'
+          },
+          {
+            date: "13-may-2018",
+            'posted-by': "umashankar",
+            'comment-text': ' please provide approval'
+          }
+        ],
+        date: '12-jan-2018',
+        status: 'open'
+      }
+    }
+  });
 
   this.get('/rentals', function() {
     return {

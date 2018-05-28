@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('issue',{ path: '/issue/:issue_id' });
   this.route('leaves');
   this.route('ideabox');
+  this.route('newissue');
 });
 
 export default Router;

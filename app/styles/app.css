@@ -1,4 +1,11 @@
 
+.bottom-padding-10{
+	padding-bottom: 10px;
+}
+
+.top-padding-10{
+	padding-top: 10px;
+}
 .description {
 	display: block;
 	width: 240px;
@@ -12,25 +19,40 @@
 	font-style: bold;
 }
 
-.bottom-padding-10{
-	padding-bottom: 10px;
-}
 
 .old-body {
 	font-family: 'Caveat';
 }
+
+
 body {
-	
 	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 	font-size: 18px;
     background-image: url("background.jpeg");
 }
 
+
+html, body {
+	height: 100%;
+	margin: 0;
+  }
+  .ember-view{
+	  height: inherit;
+  }
+  .wrapper{
+	height: 100%;
+  }
+  .header, .footer {
+	height: 10%;
+  }
+  .content {
+	height: 80%;
+	overflow: auto;
+  }
 .footer {
-    position: absolute;
+    /*position: absolute;*/
     bottom: 0;
     width: 100%;
-    height: 60px; /* Set the fixed height of the footer here */
     line-height: 60px; /* Vertically center the text there */
     background-color: #f5f5f5;
   }

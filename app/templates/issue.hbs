@@ -28,8 +28,8 @@
 
      <label for="comment">Comment:</label>
      {{textarea value=new-comment cols="123" rows="6"}}
-        {{new-comment}}
-     <input type="button" class="btn btn-primary left" value="POST" {{action "postComment" model.id new-comment}}/>	
+
+     <input type="button" class="btn btn-primary left" value="POST" {{action "postComment" model.id model.comments new-comment}}/>	
 
 </div>
 
