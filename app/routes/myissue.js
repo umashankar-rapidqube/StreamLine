@@ -10,7 +10,7 @@ export default Route.extend({
         {"Id":126, "Date":"26-Apr-2018", "Description":"outlook installation", "Status":"Pendig For Approval"}];
     }*/
 
-    model(params) {
+    model() {
         return this.get('store').findAll('issue');
       }
 });

@@ -1,4 +1,50 @@
 <div class="container white">
-
-    leave balance : 
+   {{#each model as |leave|}}
+   leave balance : {{leave.remainingLeaves}}
+   <h1>Apply new leave:</h1>
+ 
+   <div class ="row bottom-padding-10">
+    <div class="col-sm-4">
+        <div>Choose leave type:</div>
+        {{#power-select options=leavetypes onchange=(action "choose") as |type|}}
+        {{type}}
+        {{/power-select}}       
+        {{type}}   
+        <div> From {{#power-calendar selected=arrival onSelect=(action (mut arrival) value="moment") as |calendar|}}
+  {{calendar.nav}}
+  {{calendar.days}}
+{{/power-calendar}}
+</div>
+        <div> To </div>
+    </div>
+   <div class="col-sm-8">
+        <div>  Reason : </div>
+  {{input type="text" value=reason disabled=entryNotAllowed size="40"}} 
+   <input type="button" class="btn btn-primary left" value="Apply" {{action "apply" }}/>
+</div>
+   </div>
+   <div class="bottom-padding-10">
+      <table class="table table-striped">
+              <thead>
+      <tr>
+        <th>Id</th>
+        <th>Description</th>
+        <th>From</th>
+        <th>To</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each leave.leaverecords as |leaverecord|}}
+     <tr>
+         <td> {{leaverecord.id}}</td>
+         <td>{{leaverecord.reason}}</td>
+         <td> {{leaverecord.from}}</td>
+         <td>{{leaverecord.to}}</td>
+         <td>{{leaverecord.status}}</td>
+     </tr>
+      {{/each}}
+</tbody>
+      </table>
+   </div>
+   {{/each}}
 </div>
