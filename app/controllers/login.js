@@ -3,7 +3,9 @@ import Controller from '@ember/controller';
 export default Controller.extend({
     loginactive: true,
     registeractive:true,
+    session: Ember.inject.service('session'),
     actions: {
+        
 
         toggle : function(tab){  
             this.set('loginactive',false) 

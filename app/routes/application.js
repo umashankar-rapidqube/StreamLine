@@ -5,13 +5,33 @@ import Route from '@ember/routing/route';
 //https://auth0.com/blog/create-your-first-ember-2-dot-0-app-from-authentication-to-calling-an-api/
 
 export default Route.extend({
-   model(){
-       var urlstr=window.location.href;
-       var access_token_pos = urlstr.search("access_token");
+    session: Ember.inject.service('session'),
+    model(){
       
-       if(access_token_pos!=-1){
-           this.transitionTo('home')
+        
+
+        console.log("application model is called");
+       
+
+       var paramarray = parseHashParams(window.location.hash)
+
+       if(paramarray!=0){
+        this.get('session').set('oauth',paramarray);
+        this.transitionTo('home');
        }
+       
        this.transitionTo('login');
    }
 });
+
+function parseHashParams(hash) {
+    var params = hash.slice(1).split('&');
+  
+    var paramarray = {};
+    params.forEach(function(param) {
+      param = param.split('=');
+      paramarray[param[0]] = param[1];
+    });
+  
+    return paramarray;
+  }
