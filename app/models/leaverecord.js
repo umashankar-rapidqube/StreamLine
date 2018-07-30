@@ -6,5 +6,6 @@ export default DS.Model.extend({
         from: DS.attr('date'),
         to: DS.attr('date'),
         leaveType: DS.attr('string'),
-        status: DS.attr('string')
+        status: DS.attr('string'),
+        count: DS.attr('number')
     });
