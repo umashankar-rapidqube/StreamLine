@@ -1,6 +1,6 @@
 <div class="container white">
-   {{#each model as |leave|}}
-   leave balance : {{leave.remainingLeaves}}
+   
+   leave balance : {{user.remainingLeaves}}
    <h1>Apply new leave:</h1>
  
    <div class ="row bottom-padding-10">
@@ -34,7 +34,8 @@
       </tr>
     </thead>
     <tbody>
-      {{#each leave.leaverecords as |leaverecord|}}
+      {{#each model as |leaverecord|}}
+     
      <tr>
          <td> {{leaverecord.id}}</td>
          <td>{{leaverecord.reason}}</td>
@@ -46,5 +47,5 @@
 </tbody>
       </table>
    </div>
-   {{/each}}
+   
 </div>

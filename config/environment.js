@@ -38,6 +38,12 @@ module.exports = function(environment) {
     ENV['ember-cli-mirage'] = {
       enabled: false
     };
+    
+    ENV.APP.authurl = 'https://login.microsoftonline.com/common/oauth2/v2.0/authorize?';
+    ENV.APP.client_id = 'client_id=e1f1830e-d3d7-451a-a213-54f9c8f02d67';
+    ENV.APP.resp_type_query = '&response_type=id_token+token';
+    ENV.APP.redirect_URI = '&redirect_uri=http://localhost:4200/';
+    ENV.APP.other_params = '&scope=openid%20https%3A%2F%2Fgraph.microsoft.com%2Fmail.read&response_mode=fragment&state=12345&nonce=678910';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -58,6 +64,13 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    
+    ENV.APP.authurl = 'https://login.microsoftonline.com/common/oauth2/v2.0/authorize?';
+    ENV.APP.client_id = 'client_id=e1f1830e-d3d7-451a-a213-54f9c8f02d67';
+    ENV.APP.resp_type_query = '&response_type=id_token+token';
+    ENV.APP.redirect_URI = '&redirect_uri=https://rapidqube-streamline.herokuapp.com/';
+    ENV.APP.other_params = '&scope=openid%20https%3A%2F%2Fgraph.microsoft.com%2Fmail.read&response_mode=fragment&state=12345&nonce=678910';
+    
     // here you can enable a production-specific feature
   }
 

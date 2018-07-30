@@ -1,26 +1,31 @@
 import Route from '@ember/routing/route';
-
+import { inject } from '@ember/service';
 //import ApplicationRouteMixin from 'simple-auth/mixins/application-route-mixin';
 
 //https://auth0.com/blog/create-your-first-ember-2-dot-0-app-from-authentication-to-calling-an-api/
 
 export default Route.extend({
-    session: Ember.inject.service('session'),
+    session: inject('session'),
     model(){
       
         
-
-        console.log("application model is called");
+      var auth = this.get('session').get('oauth')
+      if(auth!=undefined){
+        this.transitionTo('home');
+        return;  
+      }
+      console.log("application model is called");
        
-
+        
        var paramarray = parseHashParams(window.location.hash)
 
-       if(paramarray!=0){
+       if(paramarray.id_token!=undefined){
         this.get('session').set('oauth',paramarray);
         this.transitionTo('home');
+        return;
        }
        
-       this.transitionTo('login');
+       return this.transitionTo('login');
    }
 });
 
