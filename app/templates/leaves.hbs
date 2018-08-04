@@ -1,27 +1,25 @@
 <div class="container white">
-   {{#each model as |leave|}}
-   leave balance : {{leave.remainingLeaves}}
+   
+   leave balance : {{user.remainingLeaves}}
    <h1>Apply new leave:</h1>
  
    <div class ="row bottom-padding-10">
     <div class="col-sm-4">
         <div>Choose leave Type:</div>
-       {{#power-select-multiple options=names selected=name
+       {{#power-select-multiple options=type selected=leaveType
  placeholder="Levetype"
- onchange=(action (mut name))
- as |name|
+ onchange=(action (mut leaveType))
+ as |leaveType|
 }}
- {{name}}
+ {{leaveType}}
 {{/power-select-multiple}}
 
        <div> From {{#power-calendar-range
- class="demo-range-calendar-with-pretty-range-ends-yo"
- center=foo
- selected=range
- onCenterChange=(action (mut foo) value="date")
- onSelect=(action (mut range) value="date") as |calendar|}}
- {{calendar.nav}}
- {{calendar.days}}
+  selected=selectedRange
+  proximitySelection=true
+  onSelect=(action (mut selectedRange) value="date") as |cal|}}
+  {{cal.nav}}
+  {{cal.days}}
 {{/power-calendar-range}}
 
 </div>
@@ -44,7 +42,8 @@
       </tr>
     </thead>
     <tbody>
-      {{#each leave.leaverecords as |leaverecord|}}
+      {{#each model as |leaverecord|}}
+     
      <tr>
          <td> {{leaverecord.id}}</td>
          <td>{{leaverecord.reason}}</td>
@@ -56,5 +55,5 @@
 </tbody>
       </table>
    </div>
-   {{/each}}
+   
 </div>
