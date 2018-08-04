@@ -26,7 +26,7 @@ export default Controller.extend({
            var redirect_uri_query = '&redirect_uri=https://rapidqube-streamline.herokuapp.com/'
            var other_params = '&scope=openid%20https%3A%2F%2Fgraph.microsoft.com%2Fmail.read&response_mode=fragment&state=12345&nonce=678910';
            window.location = authurl+client_id+resp_type_query+redirect_uri_query+other_params;
-           //this.transitionToRoute('home')
+           this.transitionToRoute('home')
         },
 
         parseJwt: function(token) {
