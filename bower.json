@@ -1,0 +1,6 @@
+{
+  "name": "stream-line",
+  "dependencies": {
+    "sweetalert2": "^6.1.0"
+  }
+}

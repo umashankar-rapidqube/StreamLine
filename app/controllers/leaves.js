@@ -16,6 +16,20 @@ export default Controller.extend({
                var selectedRange=this.get('selectedRange');
              this.set("selectedRange",selectedRange);
                console.log("selectedRange",selectedRange)
+               
+               if (leaveType === null || reason=== undefined || selectedRange=== undefined ) {
+                // swal("please fill details for login");
+                swal("Something Went Wrong", "please fill required details for leave approval!", "error");
+            } else {
+                let {
+                  leaveType,
+                  reason,
+                  selectedRange,
+                } = this.getProperties('leaveType', 'reason',' selectedRange');
+                console.log(leaveType);
+                console.log(reason);
+                console.log(selectedRange);
+              }
                var transactionstring={
                 "leaveType":leaveType,
                 "reason":reason,
@@ -38,6 +52,7 @@ export default Controller.extend({
                 success: function(response) {
                 console.log(JSON.stringify(response));
                 var message = response.message;
+                swal(''+message+'');
                 }
             })  
            },
