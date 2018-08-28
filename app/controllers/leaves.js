@@ -16,6 +16,10 @@ export default Controller.extend({
                var selectedRange=this.get('selectedRange');
              this.set("selectedRange",selectedRange);
                console.log("selectedRange",selectedRange)
+               var starts=selectedRange.start;
+               console.log("starts",starts)
+               var end=selectedRange.end;
+               console.log("end",end)
                
                if (leaveType === null || reason=== undefined || selectedRange=== undefined ) {
                 // swal("please fill details for login");
@@ -35,9 +39,9 @@ export default Controller.extend({
                 "reason":reason,
                 "selectedRange":selectedRange,
                 "status":"processing",
-                
                }
-               console.log("transactionstring"+JSON.stringify(transactionstring));
+               console.log("transactionstring",selectedRange);
+               console.log("transactionstring",(transactionstring));
             //    var mycontroller=this
  
                return $.ajax({  
@@ -49,18 +53,19 @@ export default Controller.extend({
               },
                 contentType: 'application/json',
                 data: JSON.stringify(transactionstring),
-                success: function(response) {
-                console.log(JSON.stringify(response));
-                var message = response.message;
+                success: function(Response) {
+                console.log(JSON.stringify(Response));
+                var message = Response.message;
                 swal(''+message+'');
                 }
             })  
            },
         
-           center: new Date('2016-05-17'),
+           center: new Date(),
  range: {
-   start: new Date('2016-05-10'),
-   end: new Date('2016-05-15')
+   start: new Date("January 6, 2013"),
+   
+   end: new Date("January 6, 2013")
  }
  
        }

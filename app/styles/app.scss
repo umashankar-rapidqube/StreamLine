@@ -1,5 +1,230 @@
 @import "bootstrap";
 @import "ember-power-calendar";
+.ember-power-calendar {
+	box-sizing: border-box;
+	position: relative;
+  }
+  
+  .ember-power-calendar-nav {
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+  }
+  .ember-power-calendar-nav * {
+	box-sizing: border-box;
+  }
+  
+  .ember-power-calendar-days, .ember-power-calendar-days * {
+	box-sizing: border-box;
+  }
+  
+  .ember-power-calendar-nav-title {
+	flex: 1;
+	text-align: center;
+  }
+  
+  .ember-power-calendar-row {
+	display: flex;
+	justify-content: space-between;
+  }
+  .ember-power-calendar-weekday {
+	-webkit-appearance: none;
+	flex: 1 1 100%;
+	padding: 0;
+	background-color: transparent;
+	background-color: initial;
+	border: none;
+	border: initial;
+	outline: none;
+	outline: initial;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	padding: 0;
+  }
+  .ember-power-calendar-day {
+	-webkit-appearance: none;
+	background-color: transparent;
+	background-color: initial;
+	border: none;
+	border: initial;
+	outline: none;
+	outline: initial;
+	flex: 1 1 100%;
+	font-size: inherit;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+  }
+  .ember-power-calendar-nav-control {
+	-webkit-appearance: none;
+	background-color: transparent;
+	background-color: initial;
+	border: none;
+	border: initial;
+	outline: none;
+	outline: initial;
+	font-size: inherit;
+  }
+  
+  // Theme styles
+  .ember-power-calendar {
+	font-size: 14px;
+	line-height: 1.42857;
+  }
+  .ember-power-calendar-nav {
+	line-height: 2;
+  }
+  .ember-power-calendar-nav-control {
+	line-height: 1;
+	font-size: 150%;
+	&:focus {
+	  transform: scale(1.2);
+	}
+  }
+  .ember-power-calendar-day--selected,
+  .ember-power-calendar-day--selected:not([disabled]):hover {
+	font-weight: bold;
+  }
+  
+  .ember-power-calendar-day--interactive[disabled] {
+	opacity: 0.4;
+  }
+  
+  @mixin ember-power-calendar(
+	$cell-size: null,
+	$cell-width: $cell-size,
+	$cell-height: $cell-size,
+	$cell-with-spacing-width: $cell-width + 2px,
+	$row-padding-top: 0,
+	$row-padding-bottom: 0,
+	$row-padding-left: 0,
+	$row-padding-right: 0,
+	$row-width: $cell-with-spacing-width * 7 - 2px + $row-padding-left + $row-padding-right,
+	$primary-color: #0078c9,
+	$nav-button-color: $primary-color,
+	$nav-button-color--focus: lighten($nav-button-color, 10%),
+	$day-default-text-color: #bbb,
+	$day-current-month-color: #F5F7FA,
+	$day-weekday-text-color: #333333,
+	$day-current-month-text-color: #656D78,
+	$day-other-month-text-color--hover: $day-current-month-text-color,
+	$day-focus-shadow-color: $primary-color,
+	$day-today-color: #eee,
+	$day-color--hover: #eee,
+	$day-range-bookend-color: lighten($primary-color, 40%),
+	$day-range-start-background-color: $day-range-bookend-color,
+	$day-range-start-background-color--hover: $day-range-start-background-color,
+	$day-range-end-background-color: $day-range-bookend-color,
+	$day-range-end-background-color--hover: $day-range-end-background-color,
+	$day-selected-color: lighten($primary-color, 50%),
+	$day-selected-color--hover: $day-selected-color,
+	$day-selected-text-color: #656D78,
+	$day-selected-text-color--hover: $day-selected-text-color
+  ) {
+  
+	width: $row-width;
+	.ember-power-calendar-week:first-child {
+	  &[data-missing-days="1"] {
+		padding-left: $cell-with-spacing-width * 1;
+	  }
+	  &[data-missing-days="2"] {
+		padding-left: $cell-with-spacing-width * 2;
+	  }
+	  &[data-missing-days="3"] {
+		padding-left: $cell-with-spacing-width * 3;
+	  }
+	  &[data-missing-days="4"] {
+		padding-left: $cell-with-spacing-width * 4;
+	  }
+	  &[data-missing-days="5"] {
+		padding-left: $cell-with-spacing-width * 5;
+	  }
+	  &[data-missing-days="6"] {
+		padding-left: $cell-with-spacing-width * 6;
+	  }
+	}
+	.ember-power-calendar-week:last-child {
+	  &[data-missing-days="1"] {
+		padding-right: $cell-with-spacing-width * 1;
+	  }
+	  &[data-missing-days="2"] {
+		padding-right: $cell-with-spacing-width * 2;
+	  }
+	  &[data-missing-days="3"] {
+		padding-right: $cell-with-spacing-width * 3;
+	  }
+	  &[data-missing-days="4"] {
+		padding-right: $cell-with-spacing-width * 4;
+	  }
+	  &[data-missing-days="5"] {
+		padding-right: $cell-with-spacing-width * 5;
+	  }
+	  &[data-missing-days="6"] {
+		padding-right: $cell-with-spacing-width * 6;
+	  }
+	}
+	.ember-power-calendar-day, .ember-power-calendar-weekday {
+	  max-width: $cell-width;
+	  max-height: $cell-height;
+	  width: $cell-width;
+	  height: $cell-height;
+	}
+	.ember-power-calendar-weekdays, .ember-power-calendar-week {
+	  height: $cell-height + 2px;
+	  padding-left: $row-padding-left;
+	  padding-right: $row-padding-right;
+	}
+	.ember-power-calendar-day {
+	  color: $day-default-text-color;
+	}
+	.ember-power-calendar-weekdays {
+	  color: $day-weekday-text-color;
+	}
+	.ember-power-calendar-nav-control {
+	  color: $nav-button-color;
+	  &:focus {
+		color: lighten($nav-button-color--focus, 10%);
+	  }
+	}
+	.ember-power-calendar-day--current-month {
+	  color: $day-current-month-text-color;
+	  background-color: $day-current-month-color;
+	}
+	.ember-power-calendar-day--today {
+	  background-color: $day-today-color;
+	}
+	.ember-power-calendar-day:not([disabled]):hover {
+	  background-color: $day-color--hover;
+	}
+	.ember-power-calendar-day--focused {
+	  box-shadow: inset 0px -2px 0px 0px $day-focus-shadow-color;
+	}
+	.ember-power-calendar-day--selected.ember-power-calendar-day--range-start {
+	  background-color: $day-range-start-background-color;
+	  &:hover {
+		background-color: $day-range-start-background-color--hover;
+	  }
+	}
+	.ember-power-calendar-day--selected.ember-power-calendar-day--range-end {
+	  background-color: $day-range-end-background-color;
+	  &:hover {
+		background-color: $day-range-end-background-color--hover;
+	  }
+	}
+	.ember-power-calendar-day--selected {
+	  background-color: $day-selected-color;
+	  color: $day-selected-text-color;
+	}
+	.ember-power-calendar-day--selected:not([disabled]):hover {
+	  background-color: $day-selected-color--hover;
+	  color: $day-selected-text-color--hover;
+	}
+  
+	.ember-power-calendar-day--other-month:not([disabled]):hover {
+	  color: $day-other-month-text-color--hover;
+	}
+  }
 
 
 .bottom-padding-10{
@@ -221,8 +446,200 @@ html, body {
 	background-color: #1CA347;
 	border-color: #1CA347;
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+hr {
+  background-color: #D1D3D4;
+  border: none;
+  height: 1.5px;
+  /* margin-top: 1rem; */
+}
+
+h1 {
+  color: #00A79D;
+  font-size: 70px;
+  margin: 2rem auto;
+}
+
+h1, h2,
+h3, h4,
+h5, h6 {
+  font-family: 'Roboto Slab', serif;
+}
+
+h1 span {
+  color: #6D6E71;
+}
+
+
+.svg {
+  height: 30px;
+}
+
+
+
+/* ------------ LAYOUT --------------- */
+
+.layout-main {
+  display: grid;
+  grid-template-columns: 20% 1fr 20%;
+  grid-template-rows: 2;
+  grid-template-areas:
+  "idea-entry idea-entry idea-entry"
+  ". idea-container .";
+
+  height: 100vh;
+}
+
+.layout-idea-container {
+  align-items: center;
+  /* border: 3px solid rgb(236, 145, 25); */
+  display: flex;
+  flex-direction: column;
+  grid-area: idea-container;
+}
+
+.layout-idea-entry {
+  align-items: center;
+  background-color: #E5F3F2;
+  display: flex;
+  flex-direction: column;
+  grid-area: idea-entry;
+  justify-content: space-around;
+
+}
+
+
+/* ------------ mS --------------- */
+
+.m-idea-card {
+  color: #939598;
+  margin: 1rem;
+  width: 100%;
+}
+
+.m-idea-card p {
+  padding: 1rem 0;
+}
+
+.m-idea-card div.flex-row {
+  color: #6D6E71;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.m-idea-card div.quality-buttons {
+  color: #6D6E71;
+  display: inline-block;
+  margin: 1rem 0;
+}
+
+.m-idea-card div.quality-buttons p {
+  bottom: 10px;
+  color: #6D6E71;
+  display: inline-block;
+  position: relative;
+  width: 15rem;
+}
+
+.m-idea-card div.quality-buttons img {
+  padding-right: 1rem;
+}
+
+
+.m-input-title,
+.m-input-body {
+  border: 1.5px solid #D1D3D4;
+  color: #939598;
+  font-size: 24px;
+  height: 45px;
+  margin: 10px;
+  padding: 5px;
+  width: 60%;
+}
+
+.m-searchbar {
+  margin: 30px;
+  width: 100%;
+}
+
+.m-submit-btn {
+  background-color: #00A79D;
+  color: #FFF;
+  font-size: 24px;
+  height: 45px;
+  margin: 5px auto 30px;
+  width: 60%;
+}
+
+/* Buttons */
+
+.delete-card {
+  background-image: url('icons/delete.svg');
+  border: none;
+  width: 2rem;
+}
+
+.downvote {
+  background-image: url('icons/downvote.svg');
+  border: none;
+  width: 2rem;
+}
+
+.upvote {
+  background-image: url('icons/upvote.svg');
+  border: none;
+  width: 2rem;
+}
+
+/* ------------ STATE --------------- */
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.delete-card:hover {
+  background-image: url('icons/delete-hover.svg');
+}
+
+.downvote:hover {
+  background-image: url('icons/downvote-hover.svg');
+}
+
+.upvote:hover {
+  background-image: url('icons/upvote-hover.svg');
+}
+
 
 
 @import "ember-bootstrap/bootstrap";
 
 @import "ember-power-select";
+// 
+img {
+	width:100%
+}
+// bodys { padding-top:30px; }
+.widget .panel-body { padding:0px; }
+.widget .list-group { margin-bottom: 0; }
+.widget .panel-title { display:inline }
+.widget .label-info { float: right; }
+.widget li.list-group-item {border-radius: 0;width:1144px; border: 0;border-top: 1px solid #ddd;}
+.widget li.list-group-item:hover { background-color: rgba(86,61,124,.1); }
+.widget .mic-info { color: #666666;font-size: 11px; }
+.widget .action { margin-top:5px; }
+.widget .comment-text { font-size: 12px; }
+.widget .btn-block { border-top-left-radius:0px;border-top-right-radius:0px; }

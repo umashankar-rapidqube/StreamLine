@@ -1,1 +1,178 @@
-{{outlet}}
+<section class="testimonial py-5" id="testimonial">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-4 py-5 bg-primary text-white text-center ">
+                <div class=" ">
+                    <div class="card-body">
+                        <img src="../assets/idea.png" style="width:50%">
+                        <h2 style="margin-top:-1px" class="py-3">Idea Box</h2>
+                        <p>An employee Idea Box is a device for obtaining employee input – comments and suggestions – in hopes of improving internal processes and/or products.
+
+</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 py-5 border">
+                <h4 class="pb-4">Please fill with your IDEAS</h4>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                          {{input type="text" value=title  placeholder="Title" class="form-control" }}
+                        </div>
+                        <div class="form-group col-md-6">
+                           {{input type="text" value=domain class="form-control" placeholder="Body"}}
+                        </div>
+                      </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                           {{input type="text" value=email placeholder="Email Id" class="form-control" required="required" }}
+                        </div>
+                         <div class="form-group col-md-6">
+                           {{input type="text" value=suggestions placeholder="Suggestions" class="form-control" required="required" }}
+                        </div>
+
+                        {{!-- <div class="form-group col-md-6">
+                                  
+                                  <select id="inputState" class="form-control">
+                                    <option selected>Choose ...</option>
+                                    <option> New Buyer</option>
+                                    <option> Auction</option>
+                                    <option> Complaint</option>
+                                    <option> Feedback</option>
+                                  </select>
+                        </div> --}}
+                        <div class="form-group col-md-12">
+                                  {{textarea value=description name="Description" placeholder="Description" cols="40" rows="5" class="form-control"}}
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <div class="form-group">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                                  <label class="form-check-label" for="invalidCheck2">
+                                    <small>By clicking Submit, you agree to our Terms & Conditions, Visitor Agreement and Privacy Policy.</small>
+                                  </label>
+                                </div>
+                              </div>
+                    
+                          </div>
+                    </div>
+                    
+                    <div class="form-row">
+                       <input type="button" class="btn btn-primary left" value="Submit" {{action "submit" }}/>
+                        {{!-- <button type="button" class="btn btn-danger">Submit</button> --}}
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+  
+</section>
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default widget">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-comment"></span>
+                <h3 class="panel-title">
+                    Recent Posts</h3>
+                <span class="label label-info">
+                    78</span>
+            </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-2 col-md-1">
+                                <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
+                            <div class="col-xs-10 col-md-11">
+                                <div>
+                                    <a href="http://www.jquery2dotnet.com/2013/10/google-style-login-page-desing-usign.html">
+                                        Google Style Login Page Design Using Bootstrap</a>
+                                    <div class="mic-info">
+                                        By: <a href="#">Bhaumik Patel</a> on 2 Aug 2013
+                                    </div>
+                                </div>
+                                <div class="comment-text">
+                                    Awesome design
+                                </div>
+                                <div class="action">
+                                    <button type="button" class="btn btn-primary btn-xs" title="Edit">
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-success btn-xs" title="Approved">
+                                        <span class="glyphicon glyphicon-ok"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-xs" title="Delete">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-2 col-md-1">
+                                <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
+                            <div class="col-xs-10 col-md-11">
+                                <div>
+                                    <a href="http://bootsnipp.com/BhaumikPatel/snippets/Obgj">Admin Panel Quick Shortcuts</a>
+                                    <div class="mic-info">
+                                        By: <a href="#">Bhaumik Patel</a> on 11 Nov 2013
+                                    </div>
+                                </div>
+                                <div class="comment-text">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+                                </div>
+                                <div class="action">
+                                    <button type="button" class="btn btn-primary btn-xs" title="Edit">
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-success btn-xs" title="Approved">
+                                        <span class="glyphicon glyphicon-ok"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-xs" title="Delete">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-2 col-md-1">
+                                <img src="https://www.itspinkpot.com/wp-content/uploads/2017/03/Chaitra-Profile-1-1.png" class="img-circle img-responsive" alt="" /></div>
+                            <div class="col-xs-10 col-md-11">
+                                <div>
+                                    <a href="http://bootsnipp.com/BhaumikPatel/snippets/4ldn">Cool Sign Up</a>
+                                    <div class="mic-info">
+                                        By: <a href="#">Bhaumik Patel</a> on 11 Nov 2013
+                                    </div>
+                                </div>
+                                <div class="comment-text">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+                                </div>
+                                <div class="action">
+                                    <button type="button" class="btn btn-primary btn-xs" title="Edit">
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-success btn-xs" title="Approved">
+                                        <span class="glyphicon glyphicon-ok"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-xs" title="Delete">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-primary btn-sm btn-block" role="button"><span class="glyphicon glyphicon-refresh"></span> More</a>
+            </div>
+        </div>
+    </div>
+</div>
