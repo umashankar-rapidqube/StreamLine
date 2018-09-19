@@ -1,19 +1,11 @@
 @import "bootstrap";
 @import "ember-power-calendar";
-<<<<<<< HEAD
 .power-calendar-range{
-=======
-.ember-power-calendar {
->>>>>>> 9b345ad85e42fe1977d87a22469081353af7c5ff
 	box-sizing: border-box;
 	position: relative;
   }
   
-<<<<<<< HEAD
   .power-calendar-range {
-=======
-  .ember-power-calendar-nav {
->>>>>>> 9b345ad85e42fe1977d87a22469081353af7c5ff
 	box-sizing: border-box;
 	display: flex;
 	justify-content: space-between;
@@ -22,36 +14,20 @@
 	box-sizing: border-box;
   }
   
-<<<<<<< HEAD
   .power-calendar-range, .power-calendar-range * {
 	box-sizing: border-box;
   }
   
   .power-calendar-range {
-=======
-  .ember-power-calendar-days, .ember-power-calendar-days * {
-	box-sizing: border-box;
-  }
-  
-  .ember-power-calendar-nav-title {
->>>>>>> 9b345ad85e42fe1977d87a22469081353af7c5ff
 	flex: 1;
 	text-align: center;
   }
   
-<<<<<<< HEAD
   .power-calendar-range {
 	display: flex;
 	justify-content: space-between;
   }
   .power-calendar-range{
-=======
-  .ember-power-calendar-row {
-	display: flex;
-	justify-content: space-between;
-  }
-  .ember-power-calendar-weekday {
->>>>>>> 9b345ad85e42fe1977d87a22469081353af7c5ff
 	-webkit-appearance: none;
 	flex: 1 1 100%;
 	padding: 0;
@@ -492,7 +468,6 @@ h1 {
   font-size: 70px;
   margin: 2rem auto;
 }
-<<<<<<< HEAD
 
 h1, h2,
 h3, h4,
@@ -658,172 +633,6 @@ img {
 	width:100%
 }
 
-=======
-
-h1, h2,
-h3, h4,
-h5, h6 {
-  font-family: 'Roboto Slab', serif;
-}
-
-h1 span {
-  color: #6D6E71;
-}
-
-
-.svg {
-  height: 30px;
-}
-
-
-
-/* ------------ LAYOUT --------------- */
-
-.layout-main {
-  display: grid;
-  grid-template-columns: 20% 1fr 20%;
-  grid-template-rows: 2;
-  grid-template-areas:
-  "idea-entry idea-entry idea-entry"
-  ". idea-container .";
-
-  height: 100vh;
-}
-
-.layout-idea-container {
-  align-items: center;
-  /* border: 3px solid rgb(236, 145, 25); */
-  display: flex;
-  flex-direction: column;
-  grid-area: idea-container;
-}
-
-.layout-idea-entry {
-  align-items: center;
-  background-color: #E5F3F2;
-  display: flex;
-  flex-direction: column;
-  grid-area: idea-entry;
-  justify-content: space-around;
-
-}
-
-
-/* ------------ mS --------------- */
-
-.m-idea-card {
-  color: #939598;
-  margin: 1rem;
-  width: 100%;
-}
-
-.m-idea-card p {
-  padding: 1rem 0;
-}
-
-.m-idea-card div.flex-row {
-  color: #6D6E71;
-  display: flex;
-  justify-content: space-between;
-
-}
-
-.m-idea-card div.quality-buttons {
-  color: #6D6E71;
-  display: inline-block;
-  margin: 1rem 0;
-}
-
-.m-idea-card div.quality-buttons p {
-  bottom: 10px;
-  color: #6D6E71;
-  display: inline-block;
-  position: relative;
-  width: 15rem;
-}
-
-.m-idea-card div.quality-buttons img {
-  padding-right: 1rem;
-}
-
-
-.m-input-title,
-.m-input-body {
-  border: 1.5px solid #D1D3D4;
-  color: #939598;
-  font-size: 24px;
-  height: 45px;
-  margin: 10px;
-  padding: 5px;
-  width: 60%;
-}
-
-.m-searchbar {
-  margin: 30px;
-  width: 100%;
-}
-
-.m-submit-btn {
-  background-color: #00A79D;
-  color: #FFF;
-  font-size: 24px;
-  height: 45px;
-  margin: 5px auto 30px;
-  width: 60%;
-}
-
-/* Buttons */
-
-.delete-card {
-  background-image: url('icons/delete.svg');
-  border: none;
-  width: 2rem;
-}
-
-.downvote {
-  background-image: url('icons/downvote.svg');
-  border: none;
-  width: 2rem;
-}
-
-.upvote {
-  background-image: url('icons/upvote.svg');
-  border: none;
-  width: 2rem;
-}
-
-/* ------------ STATE --------------- */
-
-button:focus {
-  outline: none;
-}
-
-button:hover {
-  cursor: pointer;
-}
-
-.delete-card:hover {
-  background-image: url('icons/delete-hover.svg');
-}
-
-.downvote:hover {
-  background-image: url('icons/downvote-hover.svg');
-}
-
-.upvote:hover {
-  background-image: url('icons/upvote-hover.svg');
-}
-
-
-
-@import "ember-bootstrap/bootstrap";
-
-@import "ember-power-select";
-// 
-img {
-	width:100%
-}
->>>>>>> 9b345ad85e42fe1977d87a22469081353af7c5ff
 // bodys { padding-top:30px; }
 .widget .panel-body { padding:0px; }
 .widget .list-group { margin-bottom: 0; }
