@@ -5,15 +5,23 @@
  
    <div class ="row bottom-padding-10">
     <div class="col-sm-4">
-        <div>Choose leave type:</div>
-        {{#power-select options=leavetypes onchange=(action "choose") as |type|}}
-        {{type}}
-        {{/power-select}}       
-        {{type}}   
-        <div> From {{#power-calendar selected=arrival onSelect=(action (mut arrival) value="moment") as |calendar|}}
-  {{calendar.nav}}
-  {{calendar.days}}
-{{/power-calendar}}
+        <div>Choose leave Type:</div>
+       {{#power-select-multiple options=type selected=leaveType
+ placeholder="Levetype"
+ onchange=(action (mut leaveType))
+ as |leaveType|
+}}
+ {{leaveType}}
+{{/power-select-multiple}}
+
+       <div> From {{#power-calendar-range
+  selected=selectedRange
+  proximitySelection=true
+  onSelect=(action (mut selectedRange) value="date") as |cal|}}
+  {{cal.nav}}
+  {{cal.days}}
+{{/power-calendar-range}}
+
 </div>
         <div> To </div>
     </div>
