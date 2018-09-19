@@ -1,9 +1,13 @@
 import Route from '@ember/routing/route';
-
+import { inject } from '@ember/service';
 
 export default Route.extend({
-    model(){
-         return this.get('store').query('leave',{userid:'5b5ad13fb671cd3aa0f6e473'})    
+    session: inject('session'),
+   
+    model(){        
+         var _userid = this.get('session').get('userid')
+         console.log(_userid)
+         return this.get('store').query('leave',{'userid':_userid})    
         }
   
 });

@@ -17,8 +17,11 @@
     "test": "ember test"
   },
   "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
+    "ember-bootstrap": "^2.0.0",
+    
     "ember-cli": "^3.1.4",
     "ember-cli-app-version": "^3.0.0",
     "ember-cli-babel": "^6.6.0",
@@ -42,11 +45,17 @@
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-newton-cradle-loader": "^0.2.3",
     "ember-oauth2": "^2.0.4-beta",
+<<<<<<< HEAD
     "ember-power-calendar": "^0.7.3",
     "ember-power-select": "^2.0.5",
+=======
+    "ember-power-calendar": "^0.7.2",
+    "ember-power-select": "^2.0.4",
+>>>>>>> 9b345ad85e42fe1977d87a22469081353af7c5ff
     "ember-resolver": "^4.0.0",
     "ember-simple-auth": "^1.6.0",
     "ember-source": "~3.1.0",
+    "ember-sweetalert": "^0.1.1",
     "ember-welcome-page": "^3.0.0",
     "eslint-plugin-ember": "^5.2.0",
     "loader.js": "^4.2.3"

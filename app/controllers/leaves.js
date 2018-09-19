@@ -62,10 +62,17 @@ export default Controller.extend({
            },
         
            center: new Date(),
+<<<<<<< HEAD
            
  range: {
    start:  new Date("23/02/1994"),
    end: new Date("23/02/1994")
+=======
+ range: {
+   start: new Date("January 6, 2013"),
+   
+   end: new Date("January 6, 2013")
+>>>>>>> 9b345ad85e42fe1977d87a22469081353af7c5ff
  }
  
        }
