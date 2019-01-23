@@ -44,7 +44,6 @@ module.exports = function(environment) {
     ENV.APP.resp_type_query = '&response_type=id_token+token';
     ENV.APP.redirect_URI = '&redirect_uri=http://localhost:4200/';
     ENV.APP.other_params = '&scope=openid%20https%3A%2F%2Fgraph.microsoft.com%2Fmail.read&response_mode=fragment&state=12345&nonce=678910';
-    ENV.APP.host= 'http://localhost:3000';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -71,7 +70,7 @@ module.exports = function(environment) {
     ENV.APP.resp_type_query = '&response_type=id_token+token';
     ENV.APP.redirect_URI = '&redirect_uri=https://rapidqube-streamline.herokuapp.com/';
     ENV.APP.other_params = '&scope=openid%20https%3A%2F%2Fgraph.microsoft.com%2Fmail.read&response_mode=fragment&state=12345&nonce=678910';
-    ENV.APP.host= 'https://streamline-backoffice.herokuapp.com';
+    
     // here you can enable a production-specific feature
   }
 

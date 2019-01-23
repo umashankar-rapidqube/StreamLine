@@ -8,5 +8,6 @@ export default DS.Model.extend({
         leaveType: DS.attr('string'),
         status: DS.attr('string'),
         count: DS.attr('number'),
-        user : DS.attr('string')
+        user : DS.attr('string'),
+        empID:DS.attr('number')
     });

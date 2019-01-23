@@ -14,6 +14,8 @@ Router.map(function() {
   this.route('leaves');
   this.route('ideabox');
   this.route('newissue');
+  this.route('admin');
+  this.route('adminn');
 });
 
 export default Router;

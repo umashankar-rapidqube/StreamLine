@@ -26,7 +26,7 @@ export default Controller.extend({
            var redirect_uri_query = ENV.APP.redirect_URI;
            var other_params = ENV.APP.other_params;
            window.location = authurl+client_id+resp_type_query+redirect_uri_query+other_params;
-           this.transitionToRoute('home')
+           
         },
 
         parseJwt: function(token) {

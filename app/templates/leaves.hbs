@@ -1,44 +1,81 @@
 <div class="container white">
    
-   leave balance : {{user.remainingLeaves}}
-   <h1>Apply new leave:</h1>
+  
+   <h1>Apply New Leave:</h1>
  
    <div class ="row bottom-padding-10">
     <div class="col-sm-4">
         <div>Choose leave Type:</div>
        {{#power-select-multiple options=type selected=leaveType
- placeholder="Levetype"
+ placeholder="Leavetype"
  onchange=(action (mut leaveType))
  as |leaveType|
 }}
  {{leaveType}}
 {{/power-select-multiple}}
 
-       <div> From {{#power-calendar-range
+       <div> From 
+         {{!-- {{#power-calendar-range
   selected=selectedRange
   proximitySelection=true
   onSelect=(action (mut selectedRange) value="date") as |cal|}}
   {{cal.nav}}
   {{cal.days}}
+{{/power-calendar-range}} --}}
+{{#power-calendar-range
+  center=center
+  selected=range
+  onSelect=(action (mut range) value="date") as |calendar|}}
+  {{calendar.nav}}
+  {{calendar.days}}
 {{/power-calendar-range}}
 
+
+</div>
+
+
+   <div class="col-sm-8">
 </div>
         <div> To </div>
     </div>
    <div class="col-sm-8">
         <div>  Reason : </div>
   {{input type="text" value=reason disabled=entryNotAllowed size="40"}} 
-   <input type="button" class="btn btn-primary left" value="Apply" {{action "apply" }}/>
+   </div>
+   <br/><br/><br/><br/>
+ 
+   <div class ="row bottom-padding-10">
+    <div class="col-sm-4">
+        <div>Choose leader:</div>
+       {{#power-select-multiple options=leader selected1=leader
+ placeholder="Choose Leader"
+ onchange=(action (mut leader))
+ as |leader|
+}}
+ {{leader}}
+{{/power-select-multiple}}
+<br/><br/>
+    <input type="button" class="btn btn-primary left" value="Apply" {{action "apply" }}/>
+     <input type="button" class="btn btn-primary left" value="requests" {{action "adminn" }}/>
+     </div>
+   {{!-- {{#link-to 'admin' }}
+   Requests
+   
+ {{/link-to}}  --}}
 </div>
+   
+
    </div>
    <div class="bottom-padding-10">
       <table class="table table-striped">
               <thead>
       <tr>
+        
         <th>Id</th>
         <th>Description</th>
         <th>From</th>
         <th>To</th>
+        <th>status</th>
       </tr>
     </thead>
     <tbody>

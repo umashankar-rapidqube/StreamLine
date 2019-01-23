@@ -20,9 +20,8 @@ export default Route.extend({
        var paramarray = parseHashParams(window.location.hash)
 
        if(paramarray.id_token!=undefined){
-         console.log(paramarray.access_token);
         this.get('session').set('oauth',paramarray);
-        this.transitionTo('home');
+        this.transitionTo('leaves');
         return;
        }
        

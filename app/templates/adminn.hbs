@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table id="mytable" class="table table-bordred table-bk">
+                    <thead class="text-center">
+                        <th>ID</th>
+                         <th>EmployeeID</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Reason</th>
+                        <th>Status</th>
+                        <th>Approved</th>
+                        <th>Rejected</th>
+                    </thead>
+                    <tbody>
+
+                        {{#each showleaves as |leaves|}}
+
+                        <tr>
+                            <td>{{leaves.id}}</td>
+                            <td>{{leaves.user}}</td>
+                            <td>{{leaves.from}}</td>
+                            <td>{{leaves.to}}</td>
+                            <td>{{leaves.reason}}</td>
+                            <td>{{leaves.status}}</td>
+                            <td>
+                               <input type="button" class="btn btn-primary left" value="Approve" {{action "submit" leaves}}/>
+                            </td>
+                            <td>
+                               <input type="button" class="btn btn-primary left" value="reject" {{action "rejected" leaves}}/>
+                            </td>
+                        </tr>
+                        {{/each}}
+
+
+
+                    </tbody>
+                </table>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+
+
+
+
+
+
+

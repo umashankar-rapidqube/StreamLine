@@ -1,7 +1,6 @@
 import DS from 'ember-data';
 import { inject } from '@ember/service';
 import { computed } from '@ember/object';
-import ENV from '../config/environment';
 
 export default DS.RESTAdapter.extend({
     session: inject('session'),
@@ -14,8 +13,7 @@ export default DS.RESTAdapter.extend({
 
     //host: 'https://api.example.com'
     //host: 'https://streamline-backoffice.herokuapp.com',
-    host: ENV.APP.host,    
-    namespace: 'api',
-    
+    host: 'http://localhost:3000',    
+    namespace: 'api'
     
 });
